@@ -1,17 +1,10 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "regions": ["sfo1"],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  }
+  ]
 }
