@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Screen1 from './components/Screen1.jsx';
 import Screen2 from './components/Screen2.jsx';
 import Screen3 from './components/Screen3.jsx';
@@ -42,6 +42,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Admin Routes - Full Screen */}
+        <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
