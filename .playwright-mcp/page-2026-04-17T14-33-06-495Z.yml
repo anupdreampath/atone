@@ -1,0 +1,8 @@
+- generic [ref=e16]:
+  - img "Atone" [ref=e18]
+  - generic [ref=e19]:
+    - img "Unlock 10% Off" [ref=e21]
+    - generic [ref=e23]:
+      - textbox "YOUR EMAIL" [disabled] [ref=e24]: john.test@example.com
+      - button "LOADING..." [disabled] [ref=e28] [cursor=pointer]
+    - img "Model" [ref=e27]

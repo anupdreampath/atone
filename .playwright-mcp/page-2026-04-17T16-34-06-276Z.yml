@@ -1,0 +1,27 @@
+- generic [ref=e16]:
+  - complementary [ref=e17]:
+    - heading "Atone Admin" [level=2] [ref=e19]
+    - generic [ref=e20]:
+      - generic [ref=e21]: Demo Admin
+      - generic [ref=e22]: admin@demo.com
+      - generic [ref=e23]: admin
+      - button "🔐 Change Password" [ref=e24] [cursor=pointer]
+    - navigation [ref=e25]:
+      - button "📋 Query Logs" [ref=e26] [cursor=pointer]
+    - button "Logout" [ref=e27] [cursor=pointer]
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - heading "Query Logs" [level=2] [ref=e31]
+        - button "📥 Export CSV" [ref=e32] [cursor=pointer]
+      - generic [ref=e33]:
+        - combobox [ref=e34] [cursor=pointer]:
+          - option "All Fields" [selected]
+          - option "Phone"
+          - option "Email"
+        - combobox [ref=e35] [cursor=pointer]:
+          - option "All Actions" [selected]
+          - option "form_submit"
+          - option "search"
+        - button "🔄 Refresh" [active] [ref=e36] [cursor=pointer]
+      - generic [ref=e37]: Loading logs...

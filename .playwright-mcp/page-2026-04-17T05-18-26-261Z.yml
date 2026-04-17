@@ -1,0 +1,15 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img "Atone" [ref=e6]
+    - img "Shop Now" [ref=e7]
+  - navigation [ref=e8]:
+    - link "Screen 1" [ref=e9] [cursor=pointer]:
+      - /url: /
+    - link "Screen 2" [ref=e10] [cursor=pointer]:
+      - /url: /screen2
+    - link "Screen 3" [ref=e11] [cursor=pointer]:
+      - /url: /screen3
+    - link "Screen 4" [ref=e12] [cursor=pointer]:
+      - /url: /screen4
+    - link "Screen 5" [ref=e13] [cursor=pointer]:
+      - /url: /screen5

@@ -1,0 +1,12 @@
+- generic [ref=e4]:
+  - heading "Admin Login" [level=1] [ref=e5]
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Email
+      - textbox "Enter admin email" [disabled] [ref=e9]: admin@demo.com
+    - generic [ref=e10]:
+      - generic [ref=e11]: Password
+      - textbox "Enter password" [disabled] [ref=e12]: admin123
+    - button "Logging in..." [disabled] [ref=e16]
+  - link "← Back to Signup" [ref=e15] [cursor=pointer]:
+    - /url: /

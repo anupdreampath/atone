@@ -1,0 +1,8 @@
+- generic [ref=e4]:
+  - img "Atone" [ref=e6]
+  - generic [ref=e7]:
+    - img "Unlock 10% Off" [ref=e9]
+    - generic [ref=e11]:
+      - textbox "YOUR NUMBER" [ref=e12]
+      - button "ENTER" [active] [ref=e13] [cursor=pointer]
+    - img "Model" [ref=e15]

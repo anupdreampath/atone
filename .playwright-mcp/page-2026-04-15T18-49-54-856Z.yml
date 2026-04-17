@@ -1,0 +1,24 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img "Atone" [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - heading "UNLOCK 10% OFF THE ATONE PIN POLO WHEN SIGNING UP WITH YOUR NUMBER" [level=2] [ref=e8]:
+          - text: UNLOCK 10% OFF
+          - text: THE ATONE PIN POLO
+          - text: WHEN SIGNING UP
+          - text: WITH YOUR
+          - text: NUMBER
+        - generic [ref=e9]:
+          - textbox "YOUR NUMBER" [ref=e10]
+          - button "ENTER" [ref=e11] [cursor=pointer]
+      - img "Model" [ref=e13]
+  - navigation [ref=e14]:
+    - link "Screen 1" [ref=e15] [cursor=pointer]:
+      - /url: /
+    - link "Screen 2" [ref=e16] [cursor=pointer]:
+      - /url: /screen2
+    - link "Screen 3" [ref=e17] [cursor=pointer]:
+      - /url: /screen3
+    - link "Screen 4" [ref=e18] [cursor=pointer]:
+      - /url: /screen4

@@ -1,0 +1,77 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - heading "Atone Admin" [level=2] [ref=e6]
+    - generic [ref=e7]:
+      - generic [ref=e8]: Demo Admin
+      - generic [ref=e9]: admin@demo.com
+      - generic [ref=e10]: admin
+    - navigation [ref=e11]:
+      - button "📋 Query Logs" [ref=e12] [cursor=pointer]
+      - button "👥 Users" [ref=e13] [cursor=pointer]
+      - button "⚙️ Settings" [ref=e14] [cursor=pointer]
+    - button "Logout" [ref=e15] [cursor=pointer]
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - heading "Query Logs" [level=2] [ref=e18]
+      - generic [ref=e19]:
+        - combobox [ref=e20] [cursor=pointer]:
+          - option "All Fields" [selected]
+          - option "email"
+          - option "submit_button"
+          - option "phone_number"
+        - combobox [ref=e21] [cursor=pointer]:
+          - option "All Actions" [selected]
+          - option "form_submit"
+          - option "search"
+        - button "🔄 Refresh" [ref=e22] [cursor=pointer]
+      - table [ref=e24]:
+        - rowgroup [ref=e25]:
+          - row "ID User ID Field Value Action IP Address Timestamp" [ref=e26]:
+            - columnheader "ID" [ref=e27]
+            - columnheader "User ID" [ref=e28]
+            - columnheader "Field" [ref=e29]
+            - columnheader "Value" [ref=e30]
+            - columnheader "Action" [ref=e31]
+            - columnheader "IP Address" [ref=e32]
+            - columnheader "Timestamp" [ref=e33]
+        - rowgroup [ref=e34]:
+          - row "5 3 email john.test@example.com form_submit 49.36.241.97 4/17/2026, 2:33:10 PM" [ref=e35]:
+            - cell "5" [ref=e36]
+            - cell "3" [ref=e37]
+            - cell "email" [ref=e38]
+            - cell "john.test@example.com" [ref=e39]
+            - cell "form_submit" [ref=e40]
+            - cell "49.36.241.97" [ref=e41]
+            - cell "4/17/2026, 2:33:10 PM" [ref=e42]
+          - row "4 2 email test.user@example.com form_submit 49.36.241.97 4/17/2026, 2:16:10 PM" [ref=e43]:
+            - cell "4" [ref=e44]
+            - cell "2" [ref=e45]
+            - cell "email" [ref=e46]
+            - cell "test.user@example.com" [ref=e47]
+            - cell "form_submit" [ref=e48]
+            - cell "49.36.241.97" [ref=e49]
+            - cell "4/17/2026, 2:16:10 PM" [ref=e50]
+          - row "3 1 submit_button form_submit 192.168.1.1 4/17/2026, 1:36:13 PM" [ref=e51]:
+            - cell "3" [ref=e52]
+            - cell "1" [ref=e53]
+            - cell "submit_button" [ref=e54]
+            - cell [ref=e55]
+            - cell "form_submit" [ref=e56]
+            - cell "192.168.1.1" [ref=e57]
+            - cell "4/17/2026, 1:36:13 PM" [ref=e58]
+          - row "2 1 email testuser-1776432970643@example.com search 192.168.1.1 4/17/2026, 1:36:13 PM" [ref=e59]:
+            - cell "2" [ref=e60]
+            - cell "1" [ref=e61]
+            - cell "email" [ref=e62]
+            - cell "testuser-1776432970643@example.com" [ref=e63]
+            - cell "search" [ref=e64]
+            - cell "192.168.1.1" [ref=e65]
+            - cell "4/17/2026, 1:36:13 PM" [ref=e66]
+          - row "1 1 phone_number 5551234567 search 192.168.1.1 4/17/2026, 1:36:13 PM" [ref=e67]:
+            - cell "1" [ref=e68]
+            - cell "1" [ref=e69]
+            - cell "phone_number" [ref=e70]
+            - cell "5551234567" [ref=e71]
+            - cell "search" [ref=e72]
+            - cell "192.168.1.1" [ref=e73]
+            - cell "4/17/2026, 1:36:13 PM" [ref=e74]

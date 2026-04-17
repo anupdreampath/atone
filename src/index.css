@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Amalfi Coast';
+  src: url('./assets/fonts/Amalfi Coast.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apollo';
+  src: url('./assets/fonts/APOLLO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: 'Apollo', sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

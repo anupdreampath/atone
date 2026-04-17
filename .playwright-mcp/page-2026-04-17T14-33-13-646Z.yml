@@ -1,0 +1,4 @@
+- generic [ref=e29]:
+  - img "Atone" [ref=e31]
+  - img "Shop Now" [ref=e32]
+  - button "Start Over" [ref=e33] [cursor=pointer]
