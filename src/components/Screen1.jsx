@@ -7,13 +7,26 @@ import { logFormSubmit } from '../utils/queryLogger.js';
 
 function Screen1() {
   const [phone, setPhone] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async () => {
-    if (phone.trim()) {
-      await logFormSubmit('phone_number', phone);
-      navigate('/screen2', { state: { phone } });
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    // Only allow digits, max 10 characters
+    const digitsOnly = value.replace(/\D/g, '').slice(0, 10);
+    setPhone(digitsOnly);
+    if (error && digitsOnly.length === 10) {
+      setError('');
     }
+  };
+
+  const handleSubmit = async () => {
+    if (phone.length !== 10) {
+      setError('Please enter a valid 10-digit number');
+      return;
+    }
+    await logFormSubmit('phone_number', phone);
+    navigate('/screen2', { state: { phone } });
   };
 
   const handleKeyPress = (e) => {
@@ -35,12 +48,13 @@ function Screen1() {
           <div className="fullwidth-form">
             <input
               type="text"
-              className="fullwidth-input"
+              className={`fullwidth-input ${error ? 'input-error' : ''}`}
               placeholder="YOUR NUMBER"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={handlePhoneChange}
               onKeyPress={handleKeyPress}
             />
+            {error && <span className="error-message">{error}</span>}
             <button className="fullwidth-btn" onClick={handleSubmit}>ENTER</button>
           </div>
         </div>

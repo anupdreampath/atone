@@ -100,14 +100,14 @@
 
 [data-screen="1"] .fullwidth-heading-img {
   width: 358px;
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 40px;
+  margin-left: 5px;
 }
 
 [data-screen="2"] .fullwidth-heading-img {
-  width: 380px;
-  margin-top: 30px;
-  margin-left: 19px;
+  width: 358px;
+  margin-top: 40px;
+  margin-left: 5px;
 }
 
 .fullwidth-form-wrapper {
@@ -149,6 +149,20 @@
   font-size: 25px;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.fullwidth-input.input-error {
+  border-color: #ff0000;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  font-family: 'Apollo', sans-serif;
+  font-size: 12px;
+  color: #ff0000;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 
 .fullwidth-btn {
@@ -339,8 +353,92 @@
 }
 
 #scale-root.portrait .fullwidth-heading-img {
-  width: 220px;
+  width: 288px;
   margin-bottom: 15px;
+}
+
+#scale-root.portrait [data-screen="2"] .fullwidth-heading-img {
+  margin-bottom: 8px;
+}
+
+/* Screen 3 - show desktop view by default, hide mobile */
+.screen3-mobile {
+  display: none;
+}
+
+.screen3-desktop {
+  display: flex;
+}
+
+/* Screen 3 - in portrait, hide desktop, show mobile */
+#scale-root.portrait .screen3-desktop {
+  display: none;
+}
+
+#scale-root.portrait .screen3-mobile {
+  display: flex;
+}
+
+/* ===================================================================
+   SCREEN 3 MOBILE CONTROLS
+   -------------------------------------------------------------------
+   HOW TO ADJUST EACH IMAGE:
+   - SIZE:  change `width` (height stays auto = keeps aspect ratio)
+   - DOWN:  increase `margin-top`   |  UP:    decrease margin-top
+   - RIGHT: increase `margin-left`  |  LEFT:  decrease margin-left
+   =================================================================== */
+
+/* Logo - same position as screen 1 & 2 (default 10px) */
+#scale-root.portrait .screen3-mobile .fullwidth-logo {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+#scale-root.portrait .screen3-mobile .fullwidth-left {
+  flex: none;
+  padding: 10px 30px 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ----- HEADING TEXT IMAGE (WE'LL NOTIFY YOU...) ----- */
+#scale-root.portrait .screen3-mobile .fullwidth-heading-img {
+  width: 240px;        /* ↔ SIZE: change width to resize */
+  height: auto;
+  margin-top: 20px;    /* ↓ shifted down from top */
+  margin-bottom: 8px;  /* ↓ REDUCED gap to button (was 20px) */
+  margin-left: 0;      /* ← → shift LEFT/RIGHT (positive = right) */
+}
+
+#scale-root.portrait .screen3-mobile .fullwidth-form-wrapper {
+  margin-top: 0;       /* ↑↓ gap to heading (reduced) */
+}
+
+/* ----- THANK YOU BUTTON IMAGE ----- */
+#scale-root.portrait .screen3-mobile .thankyou-button-img {
+  width: 220px;         /* ↔ SIZE: change width to resize */
+  height: auto;
+  display: block;
+  margin-left: 0;       /* ← → shift LEFT/RIGHT */
+  margin-top: 0;        /* ↑↓ shift UP/DOWN */
+}
+
+/* ----- MODEL IMAGE (bottom) ----- */
+#scale-root.portrait .screen3-mobile .fullwidth-right {
+  margin-top: 30px;     /* ↑↓ shift whole model section up/down */
+}
+
+#scale-root.portrait .screen3-mobile .fullwidth-right img {
+  width: 100%;          /* ↔ SIZE: change width (e.g. 90%, 120%) */
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  margin-left: 0;       /* ← → shift LEFT/RIGHT */
+  margin-top: 20px;     /* ↑↓ shift UP/DOWN within its section */
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 #scale-root.portrait .fullwidth-form-wrapper {
@@ -351,7 +449,7 @@
   padding-left: 0;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 6px;
   z-index: 200;
 }
 
@@ -360,6 +458,10 @@
   width: 220px;
   height: 40px;
   font-size: 18px;
+}
+
+#scale-root.portrait .error-message {
+  font-size: 10px;
 }
 
 #scale-root.portrait .fullwidth-right {

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Screen1 from './components/Screen1.jsx';
 import Screen2 from './components/Screen2.jsx';
 import Screen3 from './components/Screen3.jsx';
+import ThankYou from './components/ThankYou.jsx';
 import AdminLogin from './components/AdminLogin.jsx';
 import AdminDashboard from './components/AdminDashboard.jsx';
 import './App.css';
@@ -55,6 +56,7 @@ function App() {
                 <Route path="/" element={<Screen1 />} />
                 <Route path="/screen2" element={<Screen2 />} />
                 <Route path="/screen3" element={<Screen3 />} />
+                <Route path="/thankyou" element={<ThankYou />} />
               </Routes>
             </div>
           }
