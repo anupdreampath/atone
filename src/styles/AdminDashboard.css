@@ -136,3 +136,49 @@
 .change-password-btn:hover {
   background: #2980b9;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .admin-dashboard-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .sidebar-header {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .sidebar-header h2 {
+    font-size: 18px;
+  }
+
+  .admin-profile {
+    display: none; /* Hide profile on mobile, show in menu */
+  }
+
+  .sidebar-nav {
+    display: none;
+  }
+
+  .logout-btn {
+    margin: 0;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .admin-content {
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+  }
+}

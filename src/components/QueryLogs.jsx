@@ -25,6 +25,21 @@ function QueryLogs() {
     }
   };
 
+  const handleClearAll = async () => {
+    if (!confirm('Are you sure you want to delete all entries except the first one?')) {
+      return;
+    }
+    try {
+      setLoading(true);
+      await neonDb.clearAllLogsExceptFirst();
+      await loadLogs();
+    } catch (err) {
+      setError('Failed to clear logs: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const groupedLogs = logs.reduce((acc, log) => {
     const userId = log.user_id;
     if (!acc[userId]) {
@@ -102,9 +117,14 @@ function QueryLogs() {
     <div className="query-logs-container">
       <div className="logs-header">
         <h2>Query Logs</h2>
-        <button onClick={exportToCSV} className="export-btn">
-          📥 Export CSV
-        </button>
+        <div className="header-actions">
+          <button onClick={exportToCSV} className="export-btn">
+            📥 Export CSV
+          </button>
+          <button onClick={handleClearAll} className="clear-btn">
+            🗑️ Clear All
+          </button>
+        </div>
       </div>
 
       <div className="logs-filters">

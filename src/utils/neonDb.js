@@ -42,6 +42,18 @@ export async function getQueryLogs() {
   }
 }
 
+export async function clearAllLogsExceptFirst() {
+  try {
+    const result = await query(
+      'DELETE FROM query_logs WHERE id NOT IN (SELECT id FROM query_logs ORDER BY created_at ASC LIMIT 1)'
+    );
+    return result;
+  } catch (error) {
+    console.error('Error clearing logs:', error);
+    throw error;
+  }
+}
+
 export async function logQuery(userId, fieldName, queryValue, action, ipAddress) {
   try {
     const result = await query(
@@ -64,6 +76,19 @@ export async function createUser(email, name) {
     return result;
   } catch (error) {
     console.error('Error creating user:', error);
+    throw error;
+  }
+}
+
+export async function updateUser(userId, email) {
+  try {
+    const result = await query(
+      'UPDATE users SET email = $1 WHERE id = $2 RETURNING *',
+      [email, userId]
+    );
+    return result;
+  } catch (error) {
+    console.error('Error updating user:', error);
     throw error;
   }
 }

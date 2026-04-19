@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import atoneLogo from '../assets/images/atone-logo.png';
 import modelImg from '../assets/images/2.png';
 import headingImg from '../assets/images/Screenshot_2026-04-17_at_10_35_45_AM.png';
-import { createUser } from '../utils/neonDb.js';
+import { updateUser } from '../utils/neonDb.js';
 import { logFormSubmit } from '../utils/queryLogger.js';
 import { setCurrentUserId } from '../utils/queryLogger.js';
 
@@ -17,6 +17,7 @@ function Screen2() {
   const navigate = useNavigate();
   const location = useLocation();
   const phone = location.state?.phone || '';
+  const userId = location.state?.userId;
 
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
@@ -54,12 +55,15 @@ function Screen2() {
     if (email.trim()) {
       setLoading(true);
       try {
-        const user = await createUser(email, phone);
-        setCurrentUserId(user.rows[0].id);
+        // Use existing userId from Screen1, update with email
+        if (userId) {
+          setCurrentUserId(userId);
+          await updateUser(userId, email);
+        }
         await logFormSubmit('email', email);
-        navigate('/screen3', { state: { phone, email, userId: user.rows[0].id } });
+        navigate('/screen3', { state: { phone, email, userId } });
       } catch (error) {
-        console.error('Error creating user:', error);
+        console.error('Error updating user:', error);
         alert('Error: ' + error.message);
       } finally {
         setLoading(false);

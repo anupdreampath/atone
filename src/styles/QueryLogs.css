@@ -142,3 +142,83 @@
 .export-btn:active {
   transform: scale(0.98);
 }
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.clear-btn {
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+.clear-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .query-logs-container {
+    padding: 15px;
+  }
+
+  .logs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logs-header h2 {
+    font-size: 20px;
+  }
+
+  .logs-filters {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logs-filters select,
+  .logs-filters button {
+    width: 100%;
+  }
+
+  .logs-table {
+    font-size: 12px;
+  }
+
+  .logs-table th,
+  .logs-table td {
+    padding: 8px;
+  }
+
+  .value-cell {
+    max-width: 100px;
+    font-size: 11px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .export-btn,
+  .refresh-btn,
+  .clear-btn {
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+}
